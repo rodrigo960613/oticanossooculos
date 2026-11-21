@@ -41,10 +41,10 @@ export default function Hero() {
 
         <Reveal className="hero__visual">
           <div className="arch hero__main">
-            <img src="assets/img/fachada.jpg" alt="Fachada da loja NossoÓculos, verde-sálvia com letreiro dourado" style={{ objectPosition: "50% 22%" }} />
+            <img src="assets/img/fachada.webp" alt="Fachada da loja Nosso Óculos, verde-sálvia com letreiro dourado" width="760" height="1219" fetchpriority="high" decoding="async" style={{ objectPosition: "50% 22%" }} />
           </div>
           <div className="arch hero__small">
-            <img src="assets/img/feed/solar-podio.jpg" alt="Óculos de sol geométrico sobre pódio rosado" />
+            <img src="assets/img/feed/solar-podio.webp" alt="Óculos de sol geométrico sobre pódio rosado" width="269" height="294" decoding="async" />
           </div>
           <div className="hero__badge">
             <span>Exame de vista</span>

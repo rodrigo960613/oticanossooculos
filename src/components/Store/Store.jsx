@@ -17,10 +17,10 @@ export default function Store() {
       <div className="container store__grid">
         <Reveal className="store__photos">
           <div className="arch store__main">
-            <img src="assets/img/salao.jpg" alt="Interior da loja com bancadas, espelhos e balões" />
+            <img src="assets/img/salao.webp" alt="Interior da loja com bancadas, espelhos e balões" width="552" height="366" loading="lazy" decoding="async" />
           </div>
           <div className="arch store__side">
-            <img src="assets/img/feed/cliente-parede.jpg" alt="Cliente olhando a parede de óculos de sol" />
+            <img src="assets/img/feed/cliente-parede.webp" alt="Cliente olhando a parede de óculos de sol" width="266" height="306" loading="lazy" decoding="async" />
           </div>
         </Reveal>
 

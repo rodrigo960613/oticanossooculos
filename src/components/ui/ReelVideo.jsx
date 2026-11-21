@@ -46,7 +46,7 @@ export default function ReelVideo({ src, poster, label, gold = false, square = f
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="none"
           onPlay={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
         />

@@ -23,11 +23,9 @@ export const FAQ = [
 
 // Seção Coleção: os dois vídeos de produto
 export const COLLECTION_VIDEOS = [
-  { id: "grau", title: "Óculos de grau", text: "Armações leves, para usar o dia todo.", src: "assets/video/armacoes.mp4", poster: "assets/video/armacoes.jpg" },
-  { id: "sol", title: "Óculos de sol", text: "Formatos, cores e lentes para o dia a dia.", src: "assets/video/solares.mp4", poster: "assets/video/solares.jpg" },
+  { id: "grau", title: "Óculos de grau", text: "Armações leves, para usar o dia todo.", src: "assets/video/armacoes.mp4", poster: "assets/video/armacoes.webp" },
+  { id: "sol", title: "Óculos de sol", text: "Formatos, cores e lentes para o dia a dia.", src: "assets/video/solares.mp4", poster: "assets/video/solares.webp" },
 ];
 
 // Seção "Conheça a loja": passeio pela fachada
-export const TOUR_VIDEO = { src: "assets/video/tour-loja.mp4", poster: "assets/video/tour-loja.jpg", label: "Um passeio pela loja" };
-
-const feed = (n) => `assets/img/feed/${n}.jpg`;
+export const TOUR_VIDEO = { src: "assets/video/tour-loja.mp4", poster: "assets/video/tour-loja.webp", label: "Um passeio pela loja" };
