@@ -1,39 +1,41 @@
-# NossoÓculos — Landing page
+# Nosso Óculos — Landing page
 
-React + HTML + CSS + JavaScript. Abra `index.html` no navegador (o `dist/` já vem compilado).
+React + HTML + CSS + JavaScript, empacotado com esbuild.
+
+## Como rodar
+```
+npm install
+npm run dev      # http://localhost:8000, recompila ao salvar
+npm run build    # gera a pasta public/ (é a que vai para o ar)
+```
 
 ## Estrutura
 ```
-index.html                 página base (carrega dist/app.css e dist/app.js)
-assets/                    brand/ (logo e favicons), img/, img/feed/, video/
-                           extras/ = fotos de óculos do feed (fora do site, guardadas)
-dist/                      gerado por `npm run build`
+index.html                 página base (copiada para public/ no build)
+scripts/build.js           build: junta o código e copia index.html e assets/ para public/
+assets/
+  brand/                   logo (logo-176.webp) e favicons
+  img/                     fotos do site (webp) — img/feed/ = fotos pequenas de óculos
+  video/                   vídeos .mp4 + capa (poster) .webp de cada um
 src/
   main.jsx · App.jsx       entrada e composição das seções
-  data/
-    store.js               WhatsApp, Instagram, endereço, mapa  ← edite aqui
-    content.js             ofertas, passo a passo, FAQ, vídeos da coleção e da loja, fotos
-  hooks/                   useInView (animação de entrada), useScrolled (header)
-  styles/                  tokens.css (paleta) e base.css
-  components/
-    ui/                    Button, Icon, Logo, ReelVideo, Reveal, Scallop, SectionHead
-    Header/ Hero/ Offers/ Collection/ Tour/ People/ Store/
-    Steps/ Cta/ Faq/ Location/ Footer/ FloatingWhatsApp/
-                           (cada pasta tem seu .jsx e seu .css)
+  data/store.js            WhatsApp, Instagram, endereço, mapa  ← edite aqui
+  data/content.js          ofertas, passo a passo, FAQ, vídeos
+  hooks/                   useInView, useScrolled, useSmoothScroll
+  styles/                  tokens.css (paleta e velocidade das animações) e base.css
+  components/              uma pasta por seção (.jsx + .css) e ui/ com os blocos reutilizáveis
+vercel.json                cabeçalhos de cache
 ```
 
-## Como editar
-- **Contatos e endereço:** `src/data/store.js`
-- **Vídeos da coleção (sol e grau):** troque os arquivos em `assets/video/` ou edite `COLLECTION_VIDEOS` (`src/data/content.js`)
-- **Vídeo da loja:** `TOUR_VIDEO` no mesmo arquivo
-- **Logo e favicon:** `assets/brand/` (mesma imagem, gerada a partir da logo original)
+## Publicar (Vercel)
+A Vercel roda `npm run build` e publica a pasta `public/` automaticamente a cada `git push`.
+`public/` não vai para o git (está no `.gitignore`).
 
-## Recompilar após mexer em `src/`
-```
-npm install
-npm run build
-```
-Para desenvolver com recarga automática: `npm run dev`.
+## Desempenho
+- Fotos em WebP (≈ 60% menores) com largura/altura definidas e carregamento sob demanda (`loading="lazy"`)
+- Foto principal com pré-carregamento (`preload` + `fetchpriority="high"`)
+- Vídeos só baixam quando aparecem na tela (`preload="none"`) e pausam ao sair dela
+- Cache de uma semana para `assets/` (vercel.json)
 
 ## Paleta
 Sálvia `#8fa584` · Dourado `#c9a468` · Creme `#f4eee5` · Grafite `#4a4743` · Rosado `#f3e2d8`
