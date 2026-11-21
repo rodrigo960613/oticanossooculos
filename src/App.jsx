@@ -11,10 +11,8 @@ import Faq from "./components/Faq/Faq.jsx";
 import Location from "./components/Location/Location.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import FloatingWhatsApp from "./components/FloatingWhatsApp/FloatingWhatsApp.jsx";
-import useSmoothScroll from "./hooks/useSmoothScroll.js";
 
 export default function App() {
-  useSmoothScroll();
   return (
     <>
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
