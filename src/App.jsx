@@ -17,8 +17,9 @@ export default function App() {
   useSmoothScroll();
   return (
     <>
+      <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <Header />
-      <main>
+      <main id="conteudo">
         <Hero />
         <Offers />
         <Collection />

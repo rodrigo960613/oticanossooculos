@@ -19,7 +19,9 @@
   background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform var(--dur) var(--ease);
 }
 .nav a:not(.btn):hover::after { transform: scaleX(1); }
+.nav a.is-active:not(.btn)::after { transform: scaleX(1); }
 .nav__cta { padding: 10px 18px; }
+body.nav-open { overflow: hidden; }
 
 .burger { display: none; width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; position: relative; }
 .burger span { position: absolute; left: 10px; right: 10px; height: 2.5px; border-radius: 2px; background: var(--white); transition: transform var(--dur) var(--ease), opacity var(--dur); }
