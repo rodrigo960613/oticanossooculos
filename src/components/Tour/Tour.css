@@ -1,0 +1,15 @@
+.tour { background: var(--charcoal); color: var(--white); overflow: hidden; padding: 48px 0 60px; }
+.tour__grid { display: grid; grid-template-columns: 1.1fr minmax(0, 400px); gap: 64px; align-items: center; justify-content: center; }
+.tour .section-head { margin-bottom: 24px; }
+.tour .section-head h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); }
+.tour__actions { display: flex; flex-wrap: wrap; gap: 14px; }
+@media (max-width: 860px) {
+  .tour { padding: 40px 0 48px; }
+  .tour__grid { grid-template-columns: minmax(0, 380px); gap: 28px; justify-items: center; text-align: center; }
+  .tour .section-head { margin-bottom: 20px; }
+  /* no celular: texto → vídeo → botão */
+  .tour__copy { display: contents; }
+  .tour__copy > .section-head { order: 1; }
+  .tour__video { order: 2; width: 100%; }
+  .tour__actions { order: 3; justify-content: center; }
+}
