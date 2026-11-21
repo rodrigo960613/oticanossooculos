@@ -1,0 +1,5 @@
+.cta { background: var(--charcoal); color: var(--white); padding: 36px 0; }
+.cta__inner { display: grid; grid-template-columns: auto 1fr auto; gap: 40px; align-items: center; }
+.cta h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); color: var(--white); }
+.cta p { margin-top: 8px; color: rgba(255, 253, 249, .8); }
+@media (max-width: 960px) { .cta__inner { grid-template-columns: 1fr; text-align: center; justify-items: center; } }

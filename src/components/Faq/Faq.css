@@ -1,0 +1,15 @@
+.faq__grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: start; }
+.faq .section-head { margin-bottom: 0; }
+.faq__item { border-bottom: 1.5px solid var(--sand); }
+.faq__item button {
+  width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding: 22px 0; background: none; border: 0; cursor: pointer; text-align: left;
+  font: 800 1.08rem var(--font-body); color: var(--sage-ink);
+}
+.faq__item button .icon { flex: none; color: var(--gold-deep); transition: transform var(--dur) var(--ease); }
+.faq__item.is-open button .icon { transform: rotate(45deg); }
+.faq__a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--dur) var(--ease); }
+.faq__a p { overflow: hidden; color: var(--muted); }
+.faq__item.is-open .faq__a { grid-template-rows: 1fr; }
+.faq__item.is-open .faq__a p { padding-bottom: 22px; }
+@media (max-width: 960px) { .faq__grid { grid-template-columns: 1fr; gap: 28px; } }
