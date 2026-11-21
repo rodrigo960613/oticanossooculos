@@ -1,0 +1,70 @@
+.hero {
+  position: relative;
+  background:
+    radial-gradient(900px 500px at 85% 10%, rgba(255, 255, 255, .18), transparent 60%),
+    linear-gradient(180deg, var(--sage) 0%, #86a07b 100%);
+  color: var(--white);
+  margin-top: calc(-1 * env(safe-area-inset-top, 0px));
+  padding: calc(env(safe-area-inset-top, 0px) + var(--header-h) + 48px) 0 64px;
+  overflow: hidden;
+}
+/* textura sutil, como o reboco da parede */
+.hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .35; mix-blend-mode: soft-light;
+  background-image: radial-gradient(rgba(255,255,255,.55) 1px, transparent 1.4px), radial-gradient(rgba(0,0,0,.35) 1px, transparent 1.4px);
+  background-size: 7px 7px, 11px 11px;
+  background-position: 0 0, 3px 4px;
+}
+.hero__grid { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+.hero .eyebrow { color: var(--gold-light); }
+.hero h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); color: var(--white); }
+.hero h1 em { font-style: italic; color: var(--gold-light); font-weight: 500; }
+.hero__lead { margin-top: 22px; font-size: 1.15rem; max-width: 34em; color: rgba(255, 253, 249, .92); }
+.hero__lead strong { color: var(--gold-light); font-weight: 800; }
+.hero__actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 14px; }
+.hero__facts { margin-top: 40px; display: flex; gap: 12px 26px; flex-wrap: wrap; font-size: .93rem; font-weight: 700; color: rgba(255, 253, 249, .92); }
+.hero__facts li { display: inline-flex; align-items: center; gap: 8px; }
+.hero__facts .icon { color: var(--gold-light); }
+
+.hero__visual { position: relative; min-height: 520px; }
+.hero__main { position: absolute; right: 0; top: 0; width: 72%; height: 520px; border: 8px solid var(--cream); border-radius: 999px 999px 28px 28px; }
+.hero__small { position: absolute; left: 0; bottom: -10px; width: 44%; height: 250px; border: 6px solid var(--cream); }
+.hero__badge {
+  position: absolute; left: 4%; top: 34px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center;
+  width: 148px; height: 148px; border-radius: 50%;
+  background: var(--gold); color: var(--sage-ink);
+  box-shadow: 0 16px 30px -14px rgba(0, 0, 0, .55), inset 0 0 0 4px rgba(255, 253, 249, .35);
+  transform: rotate(-8deg);
+  animation: badge-float 3s ease-in-out infinite;
+}
+.hero__badge span { font-weight: 800; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+.hero__badge strong { font-family: var(--font-display); font-size: 2.1rem; line-height: .9; }
+.hero__badge small { font-size: .66rem; line-height: 1.1; padding: 0 22px; font-weight: 700; }
+@keyframes badge-float { 50% { transform: rotate(-4deg) translateY(-8px); } }
+@media (prefers-reduced-motion: reduce) { .hero__badge { animation: none; } }
+
+@media (max-width: 960px) {
+  .hero__grid { grid-template-columns: 1fr; gap: 0; justify-items: center; text-align: center; }
+  /* no celular: texto → imagens → botões → destaques */
+  .hero__copy { display: contents; }
+  .hero__copy > .eyebrow { order: 1; }
+  .hero__copy > h1 { order: 2; }
+  .hero__copy > .hero__lead { order: 3; margin-inline: auto; }
+  .hero__visual { order: 4; min-height: 460px; max-width: 520px; margin: 40px auto 18px; width: 100%; }
+  .hero__copy > .hero__actions { order: 5; margin-top: 28px; justify-content: center; }
+  .hero__copy > .hero__facts { order: 6; margin-top: 28px; justify-content: center; }
+  .hero__main { height: 460px; }
+}
+@media (max-width: 600px) {
+  .hero { padding-bottom: 52px; }
+  .hero__actions .btn { flex: 1 1 100%; }
+  .hero__visual { min-height: 400px; margin-top: 32px; }
+  .hero__main { height: 400px; width: 78%; }
+  .hero__small { height: 190px; }
+  /* o selo mantém o texto "Exame de vista grátis na compra do seu óculos" */
+  .hero__badge { width: 134px; height: 134px; left: 0; top: 14px; }
+  .hero__badge span { font-size: .58rem; letter-spacing: .05em; }
+  .hero__badge strong { font-size: 1.6rem; }
+  .hero__badge small { font-size: .58rem; padding: 0 18px; }
+}
