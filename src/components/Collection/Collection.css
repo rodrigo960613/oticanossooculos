@@ -1,0 +1,14 @@
+.collection { background: linear-gradient(180deg, var(--cream) 0%, var(--blush) 100%); padding: 16px 0 56px; }
+.collection .section-head { margin-bottom: 32px; }
+.collection__videos { display: grid; grid-template-columns: repeat(2, minmax(0, 380px)); justify-content: center; gap: 36px; }
+.collection__item { display: grid; justify-items: center; text-align: center; gap: 6px; }
+.collection__item .vframe { width: 100%; margin-bottom: 10px; }
+.collection__item h3 { font-size: 1.5rem; color: var(--sage-ink); }
+.collection__item p { color: var(--muted); max-width: 20em; margin-bottom: 8px; font-size: .98rem; }
+@media (max-width: 600px) {
+  .collection { padding-bottom: 40px; }
+  /* um vídeo embaixo do outro, em largura total */
+  .collection__videos { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .collection__item h3 { font-size: 1.4rem; }
+  .collection__item p { font-size: .98rem; }
+}
