@@ -1,0 +1,30 @@
+/* Paleta tirada da fachada: parede verde-sálvia, letreiro dourado,
+   toldo creme e bandeira grafite. Os tons rosados vêm das fotos do feed. */
+:root {
+  --sage: #8fa584;
+  --sage-soft: #c9d6c0;
+  --sage-deep: #5c7656;
+  --sage-ink: #34462f;
+  --gold: #c9a468;
+  --gold-light: #e0c48f;
+  --gold-deep: #9a7a43;
+  --logo-gold: #d2b077;   /* cor do nome NossoÓculos e dos óculos da logo */
+  --cream: #f4eee5;
+  --sand: #e8dfd0;
+  --blush: #f3e2d8;       /* rosado suave das fotos */
+  --blush-deep: #e6c7b8;
+  --charcoal: #4a4743;
+  --ink: #2b2926;
+  --muted: #625d55;
+  --white: #fffdf9;
+
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Nunito", "Segoe UI", system-ui, sans-serif;
+
+  --radius: 22px;
+  --shadow: 0 18px 40px -22px rgba(52, 70, 47, .45);
+  --header-h: 72px;
+  --ease: cubic-bezier(.22, .61, .36, 1);   /* saída suave */
+  --dur: .6s;   /* velocidade única de todas as animações */
+  --ease-soft: cubic-bezier(.33, 0, .2, 1);
+}
