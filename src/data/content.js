@@ -1,6 +1,6 @@
 // Textos e listas das seções.
 
-// Ofertas — exatamente como na bandeira da fachada
+// Ofertas
 export const OFFERS = [
   { icon: "glasses", title: "Armações", lead: "a partir de", price: "R$ 190", note: "Modelos em metal, acetato, solares e mais." },
   { icon: "check", title: "Óculos de grau completo", lead: "a partir de", price: "R$ 285", note: "Armação + lentes com receita, pronto para usar." },
