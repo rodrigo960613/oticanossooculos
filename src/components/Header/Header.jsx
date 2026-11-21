@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <header className={`header ${scrolled ? "is-scrolled" : ""}`}>
       <div className="container header__inner">
-        <a href="#topo" className="header__logo" aria-label="NossoÓculos — início">
+        <a href="#topo" className="header__logo" aria-label="Nosso Óculos — início">
           <Logo size={44} />
         </a>
 

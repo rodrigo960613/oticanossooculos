@@ -41,7 +41,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <p className="container footer__copy">© {new Date().getFullYear()} NossoÓculos. Todos os direitos reservados.</p>
+      <p className="container footer__copy">© {new Date().getFullYear()} Nosso Óculos. Todos os direitos reservados.</p>
     </footer>
   );
 }

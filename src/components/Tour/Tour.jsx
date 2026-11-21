@@ -17,7 +17,7 @@ export default function Tour() {
             light
             eyebrow="Conheça a loja"
             title="Dá uma olhada por dentro"
-            sub="Um passeio pela fachada, pelas bancadas e pelas prateleiras do NossoÓculos, em Messejana."
+            sub="Um passeio pela fachada, pelas bancadas e pelas prateleiras do Nosso Óculos, em Messejana."
           />
           <Reveal className="tour__actions">
             <Button icon="instagram" href={STORE.instagramUrl}>Ver nosso Instagram</Button>

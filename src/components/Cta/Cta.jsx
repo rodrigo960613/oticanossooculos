@@ -12,7 +12,7 @@ export default function Cta() {
         <Logo stacked size={96} />
         <div>
           <h2>Seu exame de vista é por nossa conta</h2>
-          <p>Compre seu óculos no NossoÓculos e faça o exame sem pagar nada por ele.</p>
+          <p>Compre seu óculos no Nosso Óculos e faça o exame sem pagar nada por ele.</p>
         </div>
         <Button size="lg" icon="whatsapp" href={waLink("Olá! Quero agendar meu exame de vista grátis.")}>
           Agendar agora
