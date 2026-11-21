@@ -50,7 +50,6 @@ const PATHS = {
       </g>
     </>
   ),
-  phone: <path d={PHONE} />,
   arrow: (
     <>
       <path d="M5 12h14" />
@@ -69,14 +68,6 @@ const PATHS = {
       <path d="M12 5v14" />
     </>
   ),
-  close: (
-    <>
-      <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
-    </>
-  ),
-  prev: <path d="m15 18-6-6 6-6" />,
-  next: <path d="m9 18 6-6-6-6" />,
   play: <path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5Z" />,
 };
 

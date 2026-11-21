@@ -3,7 +3,7 @@ import SectionHead from "../ui/SectionHead.jsx";
 import Reveal from "../ui/Reveal.jsx";
 import Button from "../ui/Button.jsx";
 import Icon from "../ui/Icon.jsx";
-import { STORE, EMBED_MAP, waLink } from "../../data/store.js";
+import { STORE, waLink } from "../../data/store.js";
 import "./Location.css";
 
 export default function Location() {
@@ -15,32 +15,21 @@ export default function Location() {
           <SectionHead eyebrow="Visite a loja" title="Venha provar o seu próximo óculos" />
 
           <Reveal className="location__map">
-            {EMBED_MAP ? (
-              <>
-              <address className="map-label">
-                <span className="map-label__icon"><Icon name="pin" size={20} /></span>
-                <span>
-                  <strong>{line}</strong>
-                  <small>{neighborhood} · {city} · CEP {cep}</small>
-                </span>
-              </address>
-              <iframe
-                title="Mapa — NossoÓculos, Rua José Hipólito 152, Messejana, Fortaleza"
-                src={STORE.mapsEmbed}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
-              />
-              <Button className="map-open" size="sm" variant="sage" icon="pin" iconAfter="arrow" href={STORE.mapsLink}>Ver no Google Maps</Button>
-              </>
-            ) : (
-              <a className="map-card" href={STORE.mapsLink} target="_blank" rel="noopener noreferrer">
-                <span className="map-card__pin"><Icon name="pin" size={34} /></span>
+            <address className="map-label">
+              <span className="map-label__icon"><Icon name="pin" size={20} /></span>
+              <span>
                 <strong>{line}</strong>
-                <span>{neighborhood} · {city} · CEP {cep}</span>
-                <span className="map-card__cta">Ver no Google Maps <Icon name="arrow" size={18} /></span>
-              </a>
-            )}
+                <small>{neighborhood} · {city} · CEP {cep}</small>
+              </span>
+            </address>
+            <iframe
+              title="Mapa — Nosso Óculos, Rua José Hipólito 152, Messejana, Fortaleza"
+              src={STORE.mapsEmbed}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+            <Button className="map-open" size="sm" variant="sage" icon="pin" iconAfter="arrow" href={STORE.mapsLink}>Ver no Google Maps</Button>
           </Reveal>
         </div>
 

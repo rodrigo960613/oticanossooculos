@@ -9,11 +9,8 @@ const LAT = -3.8328069;
 const LNG = -38.4939136;
 const MAPS_SHORT_LINK = "https://maps.app.goo.gl/PyMAqP4hxtx2bWxy8";
 
-// Em ambientes que bloqueiam iframes (ex.: artefato), o build define __EMBED_MAP__=false
-export const EMBED_MAP = typeof __EMBED_MAP__ === "undefined" ? true : __EMBED_MAP__;
-
 export const STORE = {
-  name: "NossoÓculos",
+  name: "Nosso Óculos",
   whatsapp: "5585996949845",
   whatsappLabel: "(85) 99694-9845",
   instagramUser: "usenossooculos",
@@ -24,5 +21,5 @@ export const STORE = {
   mapsLink: MAPS_SHORT_LINK,
 };
 
-export const waLink = (msg = "Olá! Vim pelo site do NossoÓculos e gostaria de mais informações.") =>
+export const waLink = (msg = "Olá! Vim pelo site do Nosso Óculos e gostaria de mais informações.") =>
   `https://wa.me/${STORE.whatsapp}?text=${encodeURIComponent(msg)}`;
