@@ -1,0 +1,7 @@
+.scallop { position: absolute; left: 0; right: 0; height: 26px; color: var(--scallop); pointer-events: none; }
+.scallop::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle at 18px 0, transparent 17px, currentColor 17.5px) 0 0 / 36px 26px repeat-x;
+}
+.scallop--bottom { bottom: -1px; }
+.scallop--top { top: -1px; transform: scaleY(-1); }

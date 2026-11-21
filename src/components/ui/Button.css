@@ -1,0 +1,23 @@
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font: 800 .98rem/1 var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), background var(--dur), color var(--dur), border-color var(--dur);
+}
+.btn:hover { transform: translateY(-2px); }
+.btn .icon { flex: none; }
+.btn__after { transition: transform var(--dur) var(--ease); }
+.btn:hover .btn__after { transform: translateX(3px); }
+.btn--lg { padding: 16px 28px; font-size: 1.02rem; }
+.btn--gold { background: var(--gold); color: var(--sage-ink); box-shadow: 0 10px 24px -12px rgba(154, 122, 67, .85); }
+.btn--gold:hover { background: var(--gold-light); }
+.btn--ghost { border-color: rgba(255, 253, 249, .75); color: var(--white); }
+.btn--ghost:hover { background: rgba(255, 253, 249, .14); }
+.btn--cream { background: var(--cream); color: var(--sage-ink); }
+.btn--cream:hover { background: var(--white); }
+.btn--sage { background: var(--sage-deep); color: var(--white); }
+.btn--sage:hover { background: var(--sage-ink); }

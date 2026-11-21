@@ -1,0 +1,12 @@
+.logo { display: inline-flex; align-items: center; gap: 10px; color: var(--logo-gold); }
+.logo--stacked { flex-direction: column; gap: 10px; }
+.logo__mark { display: block; border-radius: 50%; box-shadow: 0 6px 16px -8px rgba(0, 0, 0, .5); }
+.logo__word {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1.45rem;
+  letter-spacing: -.02em;
+  line-height: 1;
+  white-space: nowrap;
+}
+.logo--stacked .logo__word { font-size: 1.9rem; }

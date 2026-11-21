@@ -1,0 +1,4 @@
+/* Entrada suave: o conteúdo já é legível e só desliza levemente para o lugar. */
+.reveal { opacity: .7; transform: translateY(18px); transition: opacity var(--dur) var(--ease-soft), transform var(--dur) var(--ease-soft); transition-delay: var(--d, 0ms); will-change: transform; }
+.reveal.is-in { opacity: 1; transform: none; will-change: auto; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }

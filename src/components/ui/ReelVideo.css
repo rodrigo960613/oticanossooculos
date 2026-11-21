@@ -1,0 +1,19 @@
+.vframe { aspect-ratio: 9 / 16; border: 6px solid var(--cream); background: #2b2926; position: relative; }
+.vframe--gold { border-color: var(--gold); }
+/* formato quadrado (recorta o vídeo vertical no centro) */
+.vframe.vframe--square { aspect-ratio: 1 / 1; border-radius: 28px; }
+.vframe__btn { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
+.vframe__btn video { width: 100%; height: 100%; object-fit: cover; }
+.vframe__play {
+  position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px;
+  display: grid; place-items: center; border-radius: 50%;
+  background: rgba(255, 253, 249, .22); backdrop-filter: blur(6px); border: 1.5px solid rgba(255, 253, 249, .7); color: var(--white);
+  transition: opacity var(--dur), transform var(--dur) var(--ease);
+}
+.vframe__btn.is-playing .vframe__play { opacity: 0; transform: scale(.8); }
+.vframe__btn:hover .vframe__play { transform: scale(1.06); }
+.vframe__btn.is-playing:hover .vframe__play { opacity: .9; }
+@media (max-width: 600px) {
+  .vframe { border-width: 4px; }
+  .vframe__play { width: 52px; height: 52px; margin: -26px 0 0 -26px; }
+}
